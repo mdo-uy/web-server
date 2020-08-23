@@ -1,0 +1,9 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "Node backend",
+  "main": "index.js",
+  "repository": "https://github.com/mdo-uy/web-server.git",
+  "author": "Mauricio De Oliveira <mauricio.d.oliveira1@gmail.com>",
+  "license": "MIT"
+}
