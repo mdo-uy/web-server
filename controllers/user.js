@@ -169,54 +169,6 @@ function getAvatar(req, res) {
     })
 }
 
-// function updateUser(req, res) {
-//     let userData = req.body;
-//     userData.email = req.body.email.toLowerCase();
-//     const params = req.params;
-    
-    
-//     if(userData.password) {
-//         bcrypt.hash(userData.password, 10, (err, hash) => {
-//             if(err) {
-//                 res.status(500).send({ message: 'Failed to encrypt password'});
-//             }
-//             else {
-//                 userData.password = hash;
-                
-//                 // Una vez que el password está hasheado va a buscar el usuario.
-//                 User.findByIdAndUpdate({ _id: params.id }, userData, (err, userUpdate) => {
-//                     if(err) {
-//                         res.status(500).send({ message: 'Server error' });
-//                     }
-//                     else {
-//                         if(!userUpdate) {
-//                             res.status(400).send({ message: 'User not found'});
-//                         }
-//                         else {
-//                             res.status(200).send({ message: 'User updated successfully' });
-//                         }
-//                     }
-//                 });
-//             }
-//         });
-//     }
-//     else {
-//         User.findByIdAndUpdate({ _id: params.id }, userData, (err, userUpdate) => {
-//             if(err) {
-//                 res.status(500).send({ message: 'Server error' });
-//             }
-//             else {
-//                 if(!userUpdate) {
-//                     res.status(400).send({ message: 'User not found'});
-//                 }
-//                 else {
-//                     res.status(200).send({ message: 'User updated successfully' });
-//                 }
-//             }
-//         });
-//     }    
-// }
-
 async function updateUser(req, res) {
     let userData = req.body;
     userData.email = req.body.email.toLowerCase();
@@ -243,7 +195,6 @@ async function updateUser(req, res) {
         }
     });  
 }
-
 
 function activateUser (req, res){
     const { id } = req.params;
